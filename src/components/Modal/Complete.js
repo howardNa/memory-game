@@ -16,10 +16,7 @@ const CompleteModal = function (props) {
       <img className="game-logo" src={gameLogo} alt="game-logo" />
       <header>Memory Game</header>
       <p className="sub-header">for a healthy life</p>
-      <h2 className="finished-text">
-        Finished in
-        {moves} moves
-      </h2>
+      <h2 className="finished-text">Finished in&nbsp;{moves} moves</h2>
       <button className="start-reset-button" onClick={onClick}>
         Play Again
       </button>
