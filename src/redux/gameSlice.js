@@ -23,7 +23,7 @@ export const game = createSlice({
       const { showCards } = state;
       const card1 = showCards[0];
       const card2 = showCards[1];
-      const match = card1.type === card2.type;
+      const match = card1.type === card2.type && card1.id !== card2.id;
       state.moves += 1;
 
       if (match) {

@@ -1,17 +1,17 @@
-import './App.css';
-import { Container, Row } from 'react-bootstrap';
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useState } from 'react';
-import classnames from 'classnames';
+import "./App.css";
+import { Container, Row } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import classnames from "classnames";
 import {
   shuffleCards,
   showCard,
   checkPair,
   restartGame,
-} from './redux/gameSlice';
-import Card from './components/Card/index';
-import StartModal from './components/Modal/Start';
-import CompleteModal from './components/Modal/Complete';
+} from "./redux/gameSlice";
+import Card from "./components/Card/index";
+import StartModal from "./components/Modal/Start";
+import CompleteModal from "./components/Modal/Complete";
 
 const App = function () {
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ const App = function () {
     const pairSelected = showCards.length === 2;
 
     if (pairSelected) {
-      setTimeout(() => dispatch(checkPair()), 1500);
+      setTimeout(() => dispatch(checkPair()), 1300);
     }
   }, [showCards]);
 
@@ -70,9 +70,9 @@ const App = function () {
     <Container className="game-container">
       <StartModal onClick={onGameStart} gameStarted={gameStarted} />
       <Row
-        className={classnames('cards-row', {
+        className={classnames("cards-row", {
           blur: !gameStarted,
-          'no-blur': gameStarted,
+          "no-blur": gameStarted,
         })}
       >
         {cardsForDisplay}
