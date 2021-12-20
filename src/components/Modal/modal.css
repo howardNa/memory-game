@@ -1,0 +1,103 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  width: 40%;
+  height: auto;
+  border: 1px solid #77628c;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 3px 3px 4px #77628c;
+}
+
+@keyframes gameLogoAnimation {
+  0% {
+    opacity: 0.5;
+    transform: rotate(-30deg);
+  }
+  50% {
+    opacity: 0.75;
+    transform: rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+.game-logo {
+  max-width: 20%;
+  animation-name: gameLogoAnimation;
+  animation-duration: 600ms;
+  animation-fill-mode: forwards;
+}
+
+header {
+  font-family: -webkit-pictograph;
+  color: #77628c;
+  font-size: 40px;
+  text-align: center;
+}
+
+.sub-header {
+  font-family: system-ui;
+  font-style: italic;
+  color: #282828;
+  margin: 0px;
+}
+
+.start-reset-button {
+  font-size: 20px;
+  color: #7ac38f;
+  background-color: #feffea;
+  border: 2px solid lightgreen;
+  margin-top: 12px;
+}
+
+.start-reset-button:hover {
+  color: white;
+  background-color: #71a0a5;
+  cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
+
+.finished-text {
+  font-family: -webkit-pictograph;
+  color: #71a0a5;
+  margin: 10px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+  .modal {
+    transform: rotate(90deg);
+    width: 75%;
+  }
+  header {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 992px) and (-webkit-min-device-pixel-ratio: 1) {
+  .modal {
+    transform: rotate(90deg);
+    width: 50%;
+  }
+  header {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-device-width: 993px) {
+  .modal {
+    width: 40%;
+  }
+  header {
+    font-size: 40px;
+  }
+}
